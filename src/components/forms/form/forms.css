@@ -1,0 +1,159 @@
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #47589b;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.App-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+input + label {
+  font-weight: bold;
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+.login {
+  background-color: var(--textColor);
+  border-radius: 7px;
+  padding: 2rem;
+}
+
+form .close-btn {
+  margin: 5px 5px 5px 5px;
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--mainColor);
+  font-size: 1.5rem;
+  outline: none;
+}
+
+form .form-h1 {
+  justify-content: center;
+  display: flex;
+  cursor: default;
+}
+
+input[type='text'],
+input[type='password'],
+textarea,
+select {
+  display: block;
+  width: 300px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="email"]{
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+  line-height: 1.42857143;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.error {
+  color: var(--secondaryColor);
+}
+
+.submit-btn {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn:hover {
+  color: var(--textColor);
+  background-color: var(--mainColorLight);
+  border: 1px solid var(--mainColor);
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:disabled {
+  color: var(--mainColor);
+  background-color: var(--textColor);
+  border: 1px solid var(--mainColor);
+  transition: background-color 0.3s ease;
+}
+
+.btn {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: var(--mainColorLight);
+  color: var(--textColor);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  color: var(--mainColor);
+  background-color: var(--textColor);
+  border: 1px solid var(--mainColor);
+  transition: background-color 0.3s ease;
+}
+
+.create-account {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.create-account p {
+  cursor: default;
+}

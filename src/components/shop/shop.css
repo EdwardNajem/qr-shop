@@ -1,0 +1,108 @@
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #47589b;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
+}
+
+body {
+  background-color: #ccc;
+}
+
+.main_content {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  margin: 50px auto;
+  padding: 50px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main_content .card {
+  background-color: var(--mainColor);
+  width: 80%;
+  height: 250px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.main_content .card .card_img img {
+  width: 200px;
+}
+
+.main_content .card .card_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--textColor);
+  margin: 25px 0;
+}
+
+.main_content .card .card_header h2 {
+  font-size: 18px;
+}
+
+.main_content .card .card_header p {
+  font-size: 14px;
+  text-align: center;
+  color: var(--textColor);
+  margin: 8px 0;
+}
+
+.main_content .card .card_header .price {
+  font-size: 25px;
+  color: var(--secondaryColor);
+}
+.main_content .card .card_header .price span {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main_content .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.main_content .card .card_header .btn {
+  width: 130px;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 35px;
+  background-color: var(--textColor);
+  color: var(--mainColor);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_content .card:hover .btn {
+  background-color: var(--mainColorLight);
+  color: var(--textColor);
+}
+
+.main_content .card:hover .card_header .price {
+  color: var(--secondaryColor);
+}
