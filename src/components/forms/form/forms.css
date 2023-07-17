@@ -54,6 +54,7 @@ form .form-h1 {
   cursor: default;
 }
 
+input[type='number'],
 input[type='text'],
 input[type='password'],
 textarea,

@@ -45,10 +45,6 @@ function SellProductForm() {
             {(formik) => {
               return (
                 <Form className="login">
-                  <NavLink to="/">
-                    <FaTimes />
-                  </NavLink>
-
                   <h1 className="form-h1">Sell Product</h1>
 
                   <FormikControl
@@ -77,21 +73,16 @@ function SellProductForm() {
                     options={checkboxOptions}
                   />
 
-                  <div>
-                    <button
-                      className="submit-btn"
-                      type="submit"
-                      disabled={!formik.isValid}
-                    >
-                      Submit
-                    </button>
-                    <button
-                      className="btn cancel"
-                      onClick={() => navigate('/')}
-                    >
-                      Cancel
-                    </button>
-                  </div>
+                  <button
+                    className="submit-btn"
+                    type="submit"
+                    disabled={!formik.isValid}
+                  >
+                    Submit
+                  </button>
+                  <button className="btn cancel" onClick={() => navigate('/')}>
+                    Cancel
+                  </button>
                 </Form>
               );
             }}
