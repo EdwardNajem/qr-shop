@@ -5,7 +5,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 350,
     currency: '$',
-    thumb: './1.png',
+    thumb: '/1.png',
     owner: 1,
   },
   {
@@ -14,7 +14,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 250,
     currency: '$',
-    thumb: './2.png',
+    thumb: '/2.png',
     owner: 2,
   },
   {
@@ -23,7 +23,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 300,
     currency: '$',
-    thumb: './3.png',
+    thumb: '/3.png',
     owner: 3,
   },
   {
@@ -32,7 +32,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 350,
     currency: '$',
-    thumb: './1.png',
+    thumb: '/1.png',
     owner: 1,
   },
   {
@@ -41,7 +41,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 250,
     currency: '$',
-    thumb: './2.png',
+    thumb: '/2.png',
     owner: 2,
   },
   {
@@ -50,7 +50,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 300,
     currency: '$',
-    thumb: './3.png',
+    thumb: '/3.png',
     owner: 3,
   },
   {
@@ -59,7 +59,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 350,
     currency: '$',
-    thumb: './1.png',
+    thumb: '/1.png',
     owner: 1,
   },
   {
@@ -68,7 +68,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 250,
     currency: '$',
-    thumb: './2.png',
+    thumb: '/2.png',
     owner: 2,
   },
   {
@@ -77,7 +77,7 @@ export const product_card = [
     description: 'Hands-free , Hands-on Music Experience',
     price: 300,
     currency: '$',
-    thumb: './3.png',
+    thumb: '/3.png',
     owner: 3,
   },
 ];

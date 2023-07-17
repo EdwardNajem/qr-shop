@@ -8,7 +8,7 @@
 .App {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 110vh;
   align-items: center;
 }
 
@@ -70,7 +70,7 @@ select {
   border-radius: 4px;
 }
 
-input[type="email"]{
+input[type='email'] {
   display: block;
   padding: 6px 12px;
   width: 100%;
@@ -112,14 +112,12 @@ input[type="email"]{
   color: var(--textColor);
   background-color: var(--mainColorLight);
   border: 1px solid var(--mainColor);
-  transition: background-color 0.3s ease;
 }
 
 .submit-btn:disabled {
   color: var(--mainColor);
   background-color: var(--textColor);
   border: 1px solid var(--mainColor);
-  transition: background-color 0.3s ease;
 }
 
 .btn {
@@ -144,6 +142,19 @@ input[type="email"]{
   background-color: var(--textColor);
   border: 1px solid var(--mainColor);
   transition: background-color 0.3s ease;
+}
+
+.cancel {
+  margin-top: 15px;
+  color: var(--mainColor);
+  background-color: var(--textColor);
+  border: 1px solid var(--mainColor);
+}
+
+.cancel:hover {
+  color: var(--textColor);
+  background-color: var(--mainColorLight);
+  border: 1px solid var(--mainColor);
 }
 
 .create-account {

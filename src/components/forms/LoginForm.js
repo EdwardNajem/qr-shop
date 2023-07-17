@@ -8,20 +8,15 @@ import FormikControl from './Formik/FormikControl';
 import './form/forms.css';
 
 function LoginForm() {
-  const { account, SubmitLogin } = useContext(LoginContext);
+  const { SubmitLogin } = useContext(LoginContext);
   const navigate = useNavigate();
   const initialValues = {
     email: '',
     password: '',
   };
   const validationSchema = Yup.object({
-    email: Yup.string()
-      .email('Invalid Email Format')
-      .required('Required')
-      .matches(account.accountemail, { message: 'Username Invalid' }),
-    password: Yup.string()
-      .required('Required')
-      .matches(account.accountpassword, { message: 'Password Invalid' }),
+    email: Yup.string().email('Invalid Email Format').required('Required'),
+    password: Yup.string().required('Required'),
   });
   const onSubmit = (values) => {
     console.log('Form Data: ', values);

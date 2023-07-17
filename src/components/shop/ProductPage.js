@@ -1,18 +1,25 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import accounts from '../accounts/accounts';
 import './product.css';
 import product_card from './product_card';
+import { NavLink } from 'react-router-dom';
 
 function ProductPage() {
   const { id } = useParams();
+
+  const path = "/confirm/" + id ;
+
   let productinfo = product_card.find((item) => item.id === Number(id));
+
   const ownerAccount = accounts.find(
     (account) => account.accid === productinfo.owner
   );
+
   if (!productinfo) {
     return <div>Product not found</div>;
   }
+
   return (
     <div className="card" key={id}>
       <div className="card_img">
@@ -32,7 +39,7 @@ function ProductPage() {
           <hr></hr>
           <h3>{ownerAccount.accfirstname + ' ' + ownerAccount.acclastname}</h3>
           <p>Contact: {ownerAccount.accmoc}</p>
-          <button className="btn">Buy Now</button>
+          <NavLink className="btn" to={path}>Buy Now</NavLink>
         </div>
       </div>
     </div>

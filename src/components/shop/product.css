@@ -1,3 +1,10 @@
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #47589b;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
+}
+
 .card {
   background-color: var(--mainColor);
   width: 100%;
@@ -75,6 +82,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .card .btn:hover {

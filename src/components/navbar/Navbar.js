@@ -9,6 +9,7 @@ import '../navbar/navbar.css';
 function Navbar() {
   const { loggedin, account, Signout } = useContext(LoginContext);
   const navRef = useRef();
+  const path = '/myads/' + account.accountid;
 
   const shownavBar = () => {
     navRef.current.classList.toggle('responsive_navbar');
@@ -49,7 +50,6 @@ function Navbar() {
       </Link>
       <nav className="navi" ref={navRef}>
         <div className="navib">
-          
           <NavLink className="home" to="/" onClick={shownavBar}>
             Home
           </NavLink>
@@ -72,7 +72,7 @@ function Navbar() {
                 <NavLink
                   onClick={toggleClass}
                   activeClassName="is-active"
-                  to={`/O`}
+                  to={`/sell`}
                 >
                   Sell Products
                 </NavLink>
@@ -106,14 +106,14 @@ function Navbar() {
                       <NavLink
                         onClick={toggleClass}
                         activeClassName="is-active"
-                        to={`/myads`}
+                        to={path}
                       >
                         My Ads
                       </NavLink>
                     </li>
                     <li>
                       <Link onClick={Signout} to={`/`}>
-                        Sign out;
+                        Sign out
                       </Link>
                     </li>
                   </ul>
