@@ -5,8 +5,8 @@ export const accounts = [
     acclastname: 'Smith',
     accemail: 'jsmith@gmail.com',
     accmoc: '123-456-1234',
-    accpassword: 'password',
-    accpoints: 0,
+    accpassword: 'a',
+    accpoints: 150,
   },
   {
     accid: 2,
@@ -15,7 +15,7 @@ export const accounts = [
     accemail: 'sconner@gmail.com',
     accmoc: 'sconner@gmail.com',
     accpassword: 'password',
-    accpoints: 0,
+    accpoints: 300,
   },
   {
     accid: 3,

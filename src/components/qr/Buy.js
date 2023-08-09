@@ -1,17 +1,25 @@
 import QrScanner from 'qr-scanner';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import '../shop/product.css';
 import './buy.css';
 
 function Buy() {
   const { id } = useParams();
+  const navigate= useNavigate();
 
   const [file, setFile] = useState(null);
   const [data, setData] = useState(null);
   const [filepath, setFilePath] = useState(null);
 
   const confirmpath = 'http://localhost:3000/generate/' + id;
+
+  const confirmpurchase = () => {
+    if(filepath === confirmpath){
+      const newpath = "../../../generate/" + id;
+      navigate(newpath);
+    }
+  }
 
   const handleChange = async (e) => {
     const file = e.target.files[0];
@@ -39,7 +47,7 @@ function Buy() {
         <div className="card_header">
           <p>{data}</p>
           <hr></hr>
-          <form>
+          <form onSubmit={confirmpurchase()}>
             <input
               type="file"
               id="myFile"
@@ -47,7 +55,12 @@ function Buy() {
               onChange={handleChange}
               accept=".png, .jpg, .jpeg"
             />
-            <button className="submit-qr download-qr">Buy Now</button>
+            <button
+              className="submit-qr download-qr"
+              type='submit'
+            >
+              Buy Now
+            </button>
           </form>
         </div>
       </div>

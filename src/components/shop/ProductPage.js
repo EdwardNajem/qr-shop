@@ -1,14 +1,13 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import accounts from '../accounts/accounts';
 import './product.css';
 import product_card from './product_card';
-import { NavLink } from 'react-router-dom';
 
 function ProductPage() {
   const { id } = useParams();
 
-  const path = "/confirm/" + id ;
+  const path = 'buy/confirm/' + id;
 
   let productinfo = product_card.find((item) => item.id === Number(id));
 
@@ -22,7 +21,7 @@ function ProductPage() {
 
   return (
     <div className="card" key={id}>
-      <div className="card_img">
+      <div className="card_img pro_img">
         <img src={productinfo.thumb} alt={productinfo.product_name} />
       </div>
       <div className="card_seperate">
@@ -39,7 +38,9 @@ function ProductPage() {
           <hr></hr>
           <h3>{ownerAccount.accfirstname + ' ' + ownerAccount.acclastname}</h3>
           <p>Contact: {ownerAccount.accmoc}</p>
-          <NavLink className="btn" to={path}>Buy Now</NavLink>
+          <NavLink className="btn" to={path}>
+            Buy Now
+          </NavLink>
         </div>
       </div>
     </div>

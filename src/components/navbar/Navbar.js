@@ -103,6 +103,7 @@ function Navbar() {
                   </Link>
                   <ul className={boxClassSubMenu.join(' ')}>
                     <li>
+                      <p>My Points: {account.accountpoints}</p>
                       <NavLink
                         onClick={toggleClass}
                         activeClassName="is-active"

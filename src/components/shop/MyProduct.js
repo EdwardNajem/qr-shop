@@ -5,7 +5,7 @@ function MyProduct(props) {
   const navigate = useNavigate();
   const { id, thumb, product_name, price, description, currency } = props.data;
 
-  let path = '/sell/' + id;
+  let path = 'confirm/' + id;
 
   return (
     <div

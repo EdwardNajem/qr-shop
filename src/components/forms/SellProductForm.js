@@ -1,14 +1,11 @@
 import { Form, Formik } from 'formik';
-import React, { useContext } from 'react';
-import { FaTimes } from 'react-icons/fa';
-import { NavLink, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-import { LoginContext } from '../context/login-context';
 import FormikControl from './Formik/FormikControl';
 import './form/forms.css';
 
 function SellProductForm() {
-  const {} = useContext(LoginContext);
   const navigate = useNavigate();
 
   const checkboxOptions = [
@@ -16,11 +13,14 @@ function SellProductForm() {
     { key: '€', value: '€' },
   ];
 
+  const dropdownOptions = [{ key: 'Yes', value: "true" }];
+
   const initialValues = {
     title: '',
     description: '',
     price: '',
     currency: '',
+    feature: '',
   };
   const validationSchema = Yup.object({
     title: Yup.string().required('Required'),
@@ -30,7 +30,6 @@ function SellProductForm() {
   });
   const onSubmit = (values) => {
     console.log('Form Data: ', values);
-
     navigate('/');
   };
   return (
@@ -71,6 +70,14 @@ function SellProductForm() {
                     type="text"
                     label="Currency"
                     options={checkboxOptions}
+                  />
+
+                  <FormikControl
+                    control="checkbox"
+                    name="feature"
+                    type="boolean"
+                    label="Feature"
+                    options={dropdownOptions}
                   />
 
                   <button

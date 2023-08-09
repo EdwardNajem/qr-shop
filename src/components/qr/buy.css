@@ -39,8 +39,8 @@ input[type='file']::file-selector-button:hover {
   height: 40px;
   font-size: 16px;
   border-radius: 8px;
-  background-color: var(--textColor);
-  color: var(--mainColor);
+  background-color: var(--mainColorLight);
+  color: var(--textColor);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -49,12 +49,22 @@ input[type='file']::file-selector-button:hover {
 }
 
 .submit-qr:hover {
-  background: var(--mainColorLight);
-  color: var(--textColor);
+  background: var(--textColor);
+  color: var(--mainColor);
 }
 
 .download-qr {
   margin-left: 40px;
+}
+
+.cancel-qr{
+  background: var(--textColor);
+  color: var(--mainColor);
+}
+
+.cancel-qr:hover{
+  background-color: var(--mainColorLight);
+  color: var(--textColor);
 }
 
 .anchor-qr {

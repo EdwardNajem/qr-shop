@@ -1,18 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import accounts from '../accounts/accounts';
-import { ShopContext } from '../context/shop-context';
 
 function Product(props) {
   const navigate = useNavigate();
-  const { id, thumb, product_name, price, description, currency, owner } =
-    props.data;
-  const { cartItems } = useContext(ShopContext);
-  const cartItemCount = cartItems[id];
-  const ownerAccount = accounts.find((account) => account.accid === owner);
-  const ownerid = ownerAccount
-    ? ownerAccount.accfirstname + ' ' + ownerAccount.acclastname
-    : '';
+  const { id, thumb, product_name, price, description, currency } = props.data;
 
   let path = '/buy/' + id;
 
